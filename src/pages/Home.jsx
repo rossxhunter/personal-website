@@ -20,7 +20,9 @@ export const Home = () => {
     >
       <Box />
       <Stack alignItems="center" direction="column" spacing={2}>
-        <Typography variant="h2">ross hunter</Typography>
+        <Typography textAlign="center" variant="h2">
+          ross hunter
+        </Typography>
         <Button
           download
           href="/files/cv.pdf"
