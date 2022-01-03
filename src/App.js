@@ -3,6 +3,7 @@ import "./App.css";
 import { Home } from "./pages/Home";
 import { createTheme, CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
+import { useEffect } from "react";
 
 function App() {
   const theme = createTheme({
@@ -13,6 +14,9 @@ function App() {
       fontFamily: "Fira Code, Arial",
     },
   });
+  useEffect(() => {
+    document.title = "Ross Hunter";
+  }, []);
   return (
     <ThemeProvider theme={theme}>
       <Home />
