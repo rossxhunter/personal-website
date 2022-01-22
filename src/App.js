@@ -1,19 +1,22 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Home } from "./pages/Home";
-import { createTheme, CssBaseline } from "@mui/material";
+import { createTheme, CssBaseline, responsiveFontSizes } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 function App() {
-  const theme = createTheme({
+  let theme = createTheme({
     palette: {
       primary: { main: "#333" },
     },
     typography: {
-      fontFamily: "Fira Code, Arial",
+      fontFamily: "Montserrat, Arial",
     },
   });
+
+  theme = responsiveFontSizes(theme);
+
   useEffect(() => {
     document.title = "Ross Hunter";
   }, []);
