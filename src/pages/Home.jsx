@@ -84,7 +84,7 @@ const ShuffleButton = () => {
   const changeCube = useStore((state) => state.changeCube);
   const changeCubeCount = useStore((state) => state.changeCubeCount);
   function shuffleClicked() {
-    let color = randomColor();
+    let color = randomColor({ luminosity: "light" });
     let color2 = randomColor({ luminosity: "bright" });
     changeBackground(color);
     changeCube(color2);
